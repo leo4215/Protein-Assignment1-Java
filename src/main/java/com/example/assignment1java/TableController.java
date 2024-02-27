@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class TableController {
@@ -83,6 +84,7 @@ public class TableController {
         FXMLLoader fxmlLoader = new FXMLLoader(ProteinApplication.class.getResource("chart-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 680, 500);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/design/styles.css")).toString());
         stage.setScene(scene);
         stage.show();
     }

@@ -1,0 +1,35 @@
+* {
+    -fx-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#table {
+    -fx-font-size: 18px;
+}
+
+#table_title {
+    -fx-font-size: 28px;
+    -fx-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-effect: dropshadow(three-pass-box, #000000, 2.5, 0, 0, 0);
+}
+
+#barChart {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+#barChart_title {
+    -fx-font-size: 28px;
+    -fx-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-effect: dropshadow(three-pass-box, #000000, 2.5, 0, 0, 0);
+}
+
+#barChart_button, #table_button {
+    -fx-font-size: 20px;
+    -fx-background-color: #f24611;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}

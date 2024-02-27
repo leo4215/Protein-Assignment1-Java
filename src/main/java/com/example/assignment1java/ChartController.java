@@ -16,8 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 
 public class ChartController {
@@ -32,13 +31,10 @@ public class ChartController {
              PreparedStatement statement = connection.prepareStatement("SELECT food_name, protein_per_100g FROM protein_in_food");
              ResultSet resultSet = statement.executeQuery()) {
 
-            List<Food> foodList = new ArrayList<>();
             while (resultSet.next()) {
                 String name = resultSet.getString("food_name");
                 double protein = resultSet.getDouble("protein_per_100g");
-                foodList.add(new Food(name, protein));
-                series.getData().add(new XYChart.Data<String, Double>(name, protein));
-                System.out.println(name + " " + protein);
+                series.getData().add(new XYChart.Data<>(name, protein));
             }
 
             barChart.getData().add(series);
@@ -53,6 +49,7 @@ public class ChartController {
         FXMLLoader fxmlLoader = new FXMLLoader(ProteinApplication.class.getResource("table-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 590, 440);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/design/styles.css")).toString());
         stage.setScene(scene);
         stage.show();
     }

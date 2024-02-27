@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1java.TableController">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1java.TableController" style="-fx-background-color: #f5d1c6;">
     <children>
         <TableView fx:id="table" layoutX="64.0" layoutY="84.0" prefHeight="276.0" prefWidth="471.0">
             <columns>
@@ -15,6 +15,6 @@
             </columns>
         </TableView>
         <Button id="table_button" layoutX="274.0" layoutY="383.0" mnemonicParsing="false" onAction="#switchToChart" text="Chart" />
-        <Text id="table_title" layoutX="170.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein content of common foods found in a diet" wrappingWidth="260.208984375" />
+        <Text id="table_title" layoutX="170.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein Table" wrappingWidth="260.208984375" />
     </children>
 </AnchorPane>
