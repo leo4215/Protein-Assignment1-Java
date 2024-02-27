@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1java.TableController">
+    <children>
+        <TableView fx:id="table" layoutX="64.0" layoutY="84.0" prefHeight="276.0" prefWidth="471.0">
+            <columns>
+                <TableColumn fx:id="food_table" prefWidth="233.99993133544922" text="Food" />
+                <TableColumn fx:id="protein_table" minWidth="0.0" prefWidth="236.00003051757812" text="Protein (g) per 100g" />
+            </columns>
+        </TableView>
+        <Button id="table_button" layoutX="274.0" layoutY="383.0" mnemonicParsing="false" onAction="#switchToChart" text="Chart" />
+        <Text id="table_title" layoutX="170.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein content of common foods found in a diet" wrappingWidth="260.208984375" />
+    </children>
+</AnchorPane>
